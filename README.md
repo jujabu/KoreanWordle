@@ -1,0 +1,1 @@
+Start of my new project on making aKorean Wordle my way.
