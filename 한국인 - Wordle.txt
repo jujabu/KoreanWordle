@@ -17,3 +17,5 @@ Hard mode så kan alt være usikkert, men må fortsatt passe på at man får rik
 Spillet skal være gøy og man skal få læringsutbytte. En blanding av hjernetrim som gir læring som belønning.
 
 24 bokstaver (14 konsunanter og 10 vokaler) som kan lage totalt 51 tegn.
+
+Prøve å lage det i terminalen hvor bokstavene skifter farge.
