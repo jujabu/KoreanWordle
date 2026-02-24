@@ -1,0 +1,9 @@
+All classes I will use
+
+"Keyboard"/Keys:
+
+Board:
+
+Word:
+
+Game?:
