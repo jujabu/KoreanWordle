@@ -1,0 +1,19 @@
+Alle idéer under tilhører hva jeg synes hadde vært kult om den kunne (kan være overkill)
+
+Korean wordle:
+
+Ta et ord fra den koreanske orboken som gjetteord og gir deg 
+hvordan du uttaler ordet, hva ordet er på engelsk og forklaringen på til det koreanske ordet på engelsk.
+
+Skal ha muligheten til å snu det om. Gjette på det engelske ordet, få det koreanske ordet etterpå med uttaelse
+og forklaringen på engelsk.
+
+Kan bestemme lengden på ordet eller kunne få alle ord i ordboken.
+
+Et tegn kan bestå av 3 bokstaver, så må ha noe som viser at hver bokstav er riktig, feil plassert eller ikke med.
+Noen tegn kan jo bare inneholde 2 bokstaver (og 1?). Passe på at kanskje man gir på forhånd hvor mange bokstaver pluss tegn det er?
+Hard mode så kan alt være usikkert, men må fortsatt passe på at man får riktige tilbakemeldinger som gjør det klart hva som gir mening.
+
+Spillet skal være gøy og man skal få læringsutbytte. En blanding av hjernetrim som gir læring som belønning.
+
+24 bokstaver (14 konsunanter og 10 vokaler) som kan lage totalt 51 tegn.
