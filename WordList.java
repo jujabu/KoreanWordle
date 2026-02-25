@@ -2,11 +2,16 @@
 
 public class WordList() {
 
-    String csvFile;
-    Word[] wordList;
+    private String csvFile;
+    private Word[] wordList;
 
     public WordList(String csvFile) {
 
         this.csvFile = csvFile;
+
+    }
+
+    private void scavCsvFile(String csvFile) {
+
     }
 }
