@@ -5,5 +5,8 @@ All classes I will use
 Board:
 
 Word:
+Word(int number, String koreanWord, String englishTranselation)
+WordList() return Word[];
+CsvToWordList("csv-file.csv") return WordList;
 
 Game?:

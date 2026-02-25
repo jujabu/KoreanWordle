@@ -19,3 +19,9 @@ Spillet skal være gøy og man skal få læringsutbytte. En blanding av hjernetr
 24 bokstaver (14 konsunanter og 10 vokaler) som kan lage totalt 51 tegn.
 
 Prøve å lage det i terminalen hvor bokstavene skifter farge.
+
+Skal kunne hente et ord fra CSV-fil som skal lagres et sted for bruk
+til spillet. Det lagres fordi man skal kunne bruke det til å se om det matcher det man skriver
+og at man ikke skal kunne få det samme ordet på nytt igjen. Trenger ikke fjerne det fra listen,
+men bygge seg opp en egen liste med referanser slik at det ikke blir duplikater.
+Lag en ny CSV-fil med ordene som er brukt opp.
