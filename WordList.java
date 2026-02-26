@@ -1,17 +1,83 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileInputStream;
+import java.nio.charset.StandardCharsets;
+import java.util.Scanner;
 // A class that takes inn  a csv-file and converts it into a list/array of Word
 
-public class WordList() {
+public class WordList {
 
-    private String csvFile;
+    private File csvFile;
     private Word[] wordList;
 
-    public WordList(String csvFile) {
+    public WordList(String csvName) {
 
-        this.csvFile = csvFile;
-
+        csvFile = new File(csvName);
+        scanCsvFile(csvFile);
     }
 
-    private void scavCsvFile(String csvFile) {
+    private int getFileLength(File csvFile) {
 
+        int length = 0;
+
+        try (Scanner scan = new Scanner(csvFile)) {
+
+            while(scan.hasNextLine()) {
+
+                scan.nextLine();
+                length++;
+            }
+
+            scan.close();
+        }
+        catch (FileNotFoundException e) {
+            
+            System.err.println("Error: File not found at " + csvFile);
+            e.printStackTrace();
+        }
+
+        return length;
+    }
+
+    private void scanCsvFile(File csvFile) {
+
+        wordList = new Word[getFileLength(csvFile)];
+        int wordListNr = 0;
+
+        //                                                            Ser ikke ut som UTF_8 funker
+        try (Scanner scan = new Scanner(new FileInputStream(csvFile), StandardCharsets.UTF_8.name())) {
+
+            while(scan.hasNext()) {
+
+                //Gets the next line and splits it by ";"
+                String line = scan.nextLine();
+                String[] lineData = line.split(";");
+
+                //Adds the word to the word-list
+                Word newWord = new Word(Integer.parseInt(lineData[0]), lineData[1], lineData[2]);
+                wordList[wordListNr] = newWord;
+                wordListNr++;
+            }
+
+            scan.close();
+        }   
+        catch (FileNotFoundException e) {
+            System.err.println("Error: File not found at " + csvFile);
+            e.printStackTrace();
+        }
+    }
+
+    public void print() {
+
+        if(wordList == null) {
+            return;
+        }
+
+        for(Word word : wordList) {
+
+            System.out.println(
+                word.getNumber() + ": " + word.getWord() + " - " + word.getTranslation()
+            );
+        }
     }
 }

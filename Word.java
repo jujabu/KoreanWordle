@@ -5,7 +5,7 @@ public class Word {
     private String translation;
 
     //My version 
-    public Word(int nr, String word, String translation) {
+    public Word(int number, String word, String translation) {
 
         this.number = number;
         this.word = word;
