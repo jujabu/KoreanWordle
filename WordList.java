@@ -1,6 +1,5 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.PrintStream;
 import java.util.Scanner;
 // A class that takes inn  a csv-file and converts it into a list/array of Word
 
