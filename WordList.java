@@ -1,7 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
-import java.io.FileInputStream;
-import java.nio.charset.StandardCharsets;
+import java.io.PrintStream;
 import java.util.Scanner;
 // A class that takes inn  a csv-file and converts it into a list/array of Word
 
@@ -44,8 +43,8 @@ public class WordList {
         wordList = new Word[getFileLength(csvFile)];
         int wordListNr = 0;
 
-        //                                                            Ser ikke ut som UTF_8 funker
-        try (Scanner scan = new Scanner(new FileInputStream(csvFile), StandardCharsets.UTF_8.name())) {
+        //Write this in PowerShell: chcp 65001
+        try (Scanner scan = new Scanner(csvFile)) {
 
             while(scan.hasNext()) {
 
@@ -67,11 +66,24 @@ public class WordList {
         }
     }
 
+    //Might need to add a bat-file to start the program at the end
+    private void setTerminal() {
+        
+        try {
+            new ProcessBuilder("cmd", "/c", "chcp 65001").inheritIO().start().waitFor();
+
+        } catch (Exception e) {
+            System.err.println("Could not change sign interpretation: " + e.getMessage());
+        }
+    }
+
     public void print() {
 
         if(wordList == null) {
             return;
         }
+        
+        setTerminal();
 
         for(Word word : wordList) {
 
