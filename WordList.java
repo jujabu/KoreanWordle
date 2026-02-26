@@ -65,24 +65,11 @@ public class WordList {
         }
     }
 
-    //Might need to add a bat-file to start the program at the end
-    private void setTerminal() {
-        
-        try {
-            new ProcessBuilder("cmd", "/c", "chcp 65001").inheritIO().start().waitFor();
-
-        } catch (Exception e) {
-            System.err.println("Could not change sign interpretation: " + e.getMessage());
-        }
-    }
-
     public void print() {
 
         if(wordList == null) {
             return;
         }
-        
-        setTerminal();
 
         for(Word word : wordList) {
 
